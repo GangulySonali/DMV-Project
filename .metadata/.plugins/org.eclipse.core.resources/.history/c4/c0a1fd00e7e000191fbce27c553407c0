@@ -1,0 +1,25 @@
+package com.gov.dmv.appoinment;
+
+
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class Appoint {
+	public WebDriver driver;
+  @Test
+  public void checkAppoinment() throws InterruptedException {
+       System.setProperty("webdriver.chrome.driver", "E:\\Batch114\\chromedriver.exe");
+       driver=new ChromeDriver();
+       driver.manage().window().maximize();
+       driver.get("https://www.dmv.ca.gov");
+       driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+       driver.findElement(By.xpath("//a[@href='/portal/dmv/dmv/appointments']")).click();
+       driver.findElement(By.linkText("//a[@href='/portal/dmv/dmv/appointments']")).click();
+      
+       }
+       }
