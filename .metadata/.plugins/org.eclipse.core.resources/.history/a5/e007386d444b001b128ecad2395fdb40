@@ -1,4 +1,4 @@
-package com.gov.dmv.appoinment;
+//new class added
 public class AddNewPerson{
 	public static void main(String[] args) {
 		System.out.println("AddNewPerson class is modified");
